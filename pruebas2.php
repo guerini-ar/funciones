@@ -3,7 +3,7 @@
 /* 
     Hacer una función para mostrar una sucesión de números.
     Ingresar los números de inicio y fin, usando el método GET.
-/*
+*/
 
 function secuenciaNumerica($a, $b){
     
