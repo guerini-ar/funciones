@@ -23,6 +23,9 @@ un botón. -->
             <option value="resta">resta</option>
             <option value="multiplicacion">multiplicación</option>
             <option value="division">división</option>
+            <option value="exponenciacion">exponenciación</option>
+            <option value="radicacion">radicación</option>
+            <option value="modulo">módulo</option>
         </select>
         <input type="text" name="factor2" placeholder="2° FACTOR"> <!--CBX2-->
         <input type="submit" name="enviar" value="Ejecutar"> <!--BTN-->
@@ -44,6 +47,12 @@ un botón. -->
             $resultado = 'El resultado de la multiplicación, es: '.($f1*$f2);
         }elseif($_POST['operaciones'] == 'division'){
             $resultado = 'El resultado de la división, es: '.($f1/$f2);
+        }elseif ($_POST['operaciones'] == 'exponenciacion') {
+            $resultado = 'El resultado de la exponenciación, es: '.pow($f1, $f2);
+        }elseif ($_POST['operaciones'] == 'radicacion') {
+            $resultado = 'El resultado de la radicación, es: '.pow($f1, 1/$f2);
+        }else {
+            $resultado = 'El resultado del módulo, es: '.($f1%$f2);
         }
 
         return $resultado; /*Cuando se resuelve el if, la función devuelve un resultado ($resultado)*/
